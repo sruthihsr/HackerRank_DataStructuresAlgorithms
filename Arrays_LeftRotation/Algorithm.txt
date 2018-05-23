@@ -1,0 +1,29 @@
+BruteForce
+vector<int> solve(vector<int> a, int d) {
+vector<int> b=a;
+
+    for (int i=0;i<a.size();i++)
+    {
+        signed int new_iter=i-d;
+        cout<<"val="<<new_iter<<endl;
+        if(new_iter<0)
+        {
+         new_iter =(a.size() + new_iter) ;
+        }
+        cout<<"new_ter"<<new_iter<<endl;
+        b[new_iter]=a[i];
+        
+        
+    }
+    for (vector<int>::iterator it = b.begin() ; it != b.end(); ++it)
+            cout <<' '<< *it;   
+ return b;
+}
+
+
+#best Algo
+
+for(int i = 0; i < lengthOfArray; i++){
+    int newLocation = (i + (lengthOfArray - shiftAmount)) % lengthOfArray;
+    a[newLocation] = in.nextInt();
+}
